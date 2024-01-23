@@ -220,56 +220,6 @@ transform: translateY(-50%);
     padding: 1em;
 }
 
-@media (max-width: 720px){
-    .logo img {
-        max-width: 35%; 
-        margin-left: 3%; 
-        margin-right: 1%; /
-    }
-
-    .search-bar input {
-        width: 80%; 
-    }
-
-    .search-bar button {
-        margin-left: 1%;
-        margin-right: 3%;
-    }
-    .navbar {
-        flex-direction: column;
-    }
-
-    .navbar-left {
-        margin-bottom: 10px;
-    }
-
-    .navbar-right {
-        margin-top: 10px;
-    }
-
-    .navbar-right a {
-        width: 100%;
-        text-align: center;
-    }
-    .promo {
-        margin-left: 2%; 
-        margin-right: 2%; 
-    }
-    .container-1 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .social-links,
-    .contact-info,
-    .map {
-        width: 100%;
-        text-align: center;
-    }
-    .social-links a {
-        margin-left: 25px;
-    }
-}
 .card-item-container {
     display: flex;
     flex-wrap: wrap;
@@ -293,12 +243,6 @@ transform: translateY(-50%);
     padding: 0.5em;
     padding-bottom: 3.4em;
     margin-bottom: 2%;
-}
-
-@media (max-width: 720px) {
-    .card-item {
-        width: calc(50% - 10px); 
-    }
 }
 
 .card-item::after {
@@ -365,11 +309,7 @@ transform: translateY(-50%);
     max-height: 100%; 
     height: auto;
 }
-@media (min-width: 981px) {
-    .card-item {
-        width: calc(25% - 2%);
-    }
-}
+
 .filters-row {
     display: flex;
     justify-content: space-around;
@@ -388,18 +328,7 @@ transform: translateY(-50%);
 label {
     margin-right: 5px;
 }
-@media (max-width: 720px) {
-    .filters-row {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
 
-    .filter {
-        margin-right: 0;
-        margin-bottom: 10px;
-        flex-basis: 48%;
-    }
-}
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -513,4 +442,70 @@ label {
 
 .buy-button:hover {
     background-color: #45a049;
+}
+@media (max-width: 720px){
+    .logo img {
+        max-width: 35%; 
+        margin-left: 3%; 
+        margin-right: 1%; /
+    }
+
+    .search-bar input {
+        width: 80%; 
+    }
+
+    .search-bar button {
+        margin-left: 1%;
+        margin-right: 3%;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-left {
+        margin-bottom: 10px;
+    }
+
+    .navbar-right {
+        margin-top: 10px;
+    }
+
+    .navbar-right a {
+        width: 100%;
+        text-align: center;
+    }
+    .promo {
+        margin-left: 2%; 
+        margin-right: 2%; 
+    }
+    .container-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links,
+    .contact-info,
+    .map {
+        width: 100%;
+        text-align: center;
+    }
+    .social-links a {
+        margin-left: 25px;
+    }
+    .filters-row {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .filter {
+        margin-right: 0;
+        margin-bottom: 10px;
+        flex-basis: 48%;
+    }
+    .card-item {
+        width: calc(50% - 10px); 
+    }
+    .card-item {
+        width: calc(25% - 2%);
+    }
 }
