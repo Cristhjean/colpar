@@ -1,0 +1,125 @@
+.main-productos{
+    .filters-row {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        background-color: #696565;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+    .filter {
+        margin-right: 20px;
+    }
+}
+.card-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    margin: 10px;
+    .card-item {
+        position: relative;
+        width: 300px; 
+        height: 400px; 
+        box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 120ms;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        padding: 0.5em;
+        padding-bottom: 3.4em;
+        margin-bottom: 2%;
+    }
+    
+    .card-item::after {
+        content: "COMPRAR";
+        padding-top: 1.25em;
+        padding-left: 1.25em;
+        position: absolute;
+        left: 0;
+        bottom: -60px;
+        background: #00AC7C;
+        color: #fff;
+        height: 2.5em;
+        width: 90%;
+        transition: all 80ms;
+        font-weight: 600;
+        text-transform: uppercase;
+        opacity: 0;
+    }
+    
+    .card-item .title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9em;
+        position: absolute;
+        left: 0.625em;
+        bottom: 1.875em;
+        font-weight: 400;
+        color: #000;
+    }
+    
+    .card-item .price {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 0.9em;
+        position: absolute;
+        left: 0.625em;
+        bottom: 0.625em;
+        color: #000;
+    }
+    
+    .card-item:hover::after {
+        bottom: 0;
+        opacity: 1;
+    }
+    
+    .card-item:active {
+        transform: scale(0.98);
+    }
+    
+    .card-item:active::after {
+        content: "COMRPADO !";
+        height: 3.125em;
+    }
+    
+    .text {
+        max-width: 55px;
+    }
+    .image {
+        width: 100%;
+        height: 70%; 
+        place-items: center;
+    }
+    
+    .image img {
+        max-width: 100%;
+        max-height: 100%; 
+        height: auto;
+    }
+}
+@media (max-width: 720px){
+
+    .filters-row {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .filter {
+        margin-right: 0;
+        margin-bottom: 10px;
+        flex-basis: 48%;
+    }
+    .card-item {
+        width: calc(50% - 10px); 
+    }
+    .card-item {
+        width: calc(25% - 2%);
+    }
+    .card-item {
+        width: calc(25% - 2%);
+    }
+}
+}
