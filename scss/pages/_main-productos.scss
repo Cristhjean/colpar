@@ -96,30 +96,8 @@
     
     .image img {
         max-width: 100%;
-        max-height: 100%; 
+        max-height: auto; 
         height: auto;
-    }
-}
-@media (max-width: 720px){
-
-    .filters-row {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .filter {
-        margin-right: 0;
-        margin-bottom: 10px;
-        flex-basis: 48%;
-    }
-    .card-item {
-        width: calc(50% - 10px); 
-    }
-    .card-item {
-        width: calc(25% - 2%);
-    }
-    .card-item {
-        width: calc(25% - 2%);
     }
 }
 }

@@ -1,11 +1,52 @@
 header {
-
     .navbar-left {
-        display: inline-block;
-        flex-direction: column;
-        margin: 1px;
+        display: flex;
+        align-items: center;
+        margin: 1%;
+    
+        .logo {
+            img {
+                max-width: 30%;
+                height: auto;
+                z-index: 1;
+                margin-left:20%;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    
+        .search-bar {
+            display: flex;
+            align-items: center;
+    
+            input {
+                padding: 8px;
+                border-radius: 1em;
+                border: 1px solid #ccc;
+            }
+    
+            button {
+                margin-left: 2px; // Ajusta este valor según tus necesidades
+                padding: 8px 15px;
+                border: none;
+                border-radius: 10px;
+                background-color: #000;
+                color: #fff;
+                cursor: pointer;
+                transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    
+                &:hover {
+                    color: #000;
+                    transform: scale(1.2);
+                    background-color: #fff;
+                }
+            }
+        }
     }
+    
     .navbar-right{
+        margin-right: 2%;
         a {
             display: inline-block;
             padding: 8px;
@@ -23,52 +64,16 @@ header {
             background-color: #fff;
         }
     }
-    }
-    .logo{
-        img {
-            max-width: 20%; 
-            height: auto;
-        
-        &:hover{
-            transform: scale(1.2)
-        }
-    }
-    }
-    .search-bar {
-        display: flex;
-        align-items: center;
-        input {
-            padding: 8px;
-        border-radius: 1em; 
-        border: 1px solid #ccc;
-        width: 400px; 
-        }
-        button {
-            margin-left: 2%;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 10px;
-            background-color: #000;
-            color: #fff;
-            cursor: pointer;
-            transition: color 0.3s, background-color 0.3s, transform 0.3s; 
-        
-        &:hover {
-            color: #000;
-            transform: scale(1.2);
-            background-color: #fff;
-        }
-    }
-    }
 }
+
 @media (max-width: 720px){
     .logo img {
-        width: 50px;
-        flex-direction: column;
+    width: 30%;
+
     }
 
     .search-bar input {
-        width: 80%; 
+        width:70%
     }
 
     .search-bar button {
@@ -92,4 +97,5 @@ header {
         width: 100%;
         text-align: center;
     }
+}
 }

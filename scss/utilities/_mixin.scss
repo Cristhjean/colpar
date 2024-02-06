@@ -1,0 +1,4 @@
+@mixin flex($flex-wrap,$justify-content){
+    flex-wrap:$flex-wrap;
+    justify-content:$justify-content;
+}

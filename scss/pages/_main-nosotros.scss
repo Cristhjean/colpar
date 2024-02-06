@@ -12,8 +12,9 @@
             float: left;
             img {
                 width: 100%;
-                height: auto;
+                height: 100%;
                 border-radius: 8px 0 0 8px;
+                object-fit: cover;
             }
         }
         .card-us-description {
@@ -22,10 +23,37 @@
             padding: 20px;
             box-sizing: border-box;
             h2 {
+                background-color: rgba(51, 51, 50, 0.815);
                 margin-top: 0;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                border: 5px solid black;
+                border-radius: 10px;
+            }
+            p{
+                background-color: rgba(51, 51, 50, 0.815);
+                margin-top: 50px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                border: 2px solid black;
+                border-radius: 10px;
             }
         }
     }
     
+    @media (max-width: 720px) {
+        .card-us {
+            .card-us-img {
+                width: 100%;
 
+                img {
+                    border-radius: 8px; // Restablecer el radio de borde
+                }
+            }
+
+            .card-us-description {
+                width: 100%;
+            }
+        }
+    }
 }

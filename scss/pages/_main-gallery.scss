@@ -1,8 +1,7 @@
 .main-gallery {
     .gallery {
+        @include flex (wrap, space-around);
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
         margin: 20px;
         .contenedor-img {
             border: 5px solid rgba(0, 0, 0, 0.212);
