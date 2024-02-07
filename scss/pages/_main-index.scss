@@ -1,5 +1,18 @@
 .main-index {
-
+.carousel {
+    .carousel-inner{
+        .d-iten{
+        .carousel-caption{
+            .btn-primary {
+                background-color: #000000;
+                &:hover{
+                    background-color: #555;
+                }
+            }
+        } 
+        }
+    }
+}
     .grid-container { 
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
@@ -29,7 +42,7 @@
                     align-items: center;
                     justify-content: center;
                     padding: 10px 20px;
-                    background-color: #007BFF;
+                    background-color: #000000;
                     color: #fff;
                     text-decoration: none;
                     border-radius: 5px;
@@ -43,5 +56,10 @@
             }
         }
     }
-    
+    @media (max-width: 720px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+            margin: 15%;
+        }
+        }
 }

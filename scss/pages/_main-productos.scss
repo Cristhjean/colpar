@@ -1,4 +1,18 @@
 .main-productos{
+    .carousel {
+        .carousel-inner{
+            .d-iten{
+            .carousel-caption{
+                .btn-primary {
+                    background-color: #000000;
+                    &:hover{
+                        background-color: #555;
+                    }
+                }
+            } 
+            }
+        }
+    }
     .filters-row {
         display: flex;
         justify-content: space-around;
@@ -42,7 +56,7 @@
         position: absolute;
         left: 0;
         bottom: -60px;
-        background: #00AC7C;
+        background: #626464;
         color: #fff;
         height: 2.5em;
         width: 90%;
@@ -83,6 +97,7 @@
     .card-item:active::after {
         content: "COMRPADO !";
         height: 3.125em;
+        background-color: #ff3737;
     }
     
     .text {
