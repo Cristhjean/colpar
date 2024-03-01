@@ -69,6 +69,7 @@
     }
 }
 
+// Estilos para el contenedor de la cuadrícula
 .grid-container { 
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -78,35 +79,37 @@
     margin-right: 5%;
     margin-bottom: 2%;
 
+    // Estilos para la tarjeta dentro de la cuadrícula
     .card {
-        // Estilos de la tarjeta
         box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
         border: none;
         max-width: 100%;
         background-color: #ccc;
-        animation: slideIn 0.5s forwards ease; // Aplicar la animación al cargar la tarjeta
-
+        animation: slideIn 0.5s forwards ease;
+        
+        // Estilos para la imagen dentro de la tarjeta
         .card-img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
-
+        
+        // Estilos para el cuerpo de la tarjeta
         .card-body {
             padding: 20px;
-
+            
             // Estilos para el título de la tarjeta
             .card-title {
                 font-size: 1.5em;
                 margin-bottom: 10px;
             }
-
+            
             // Estilos para el texto de la tarjeta
             .card-text {
                 color: #555;
             }
-
-            // Estilos para el botón de la tarjeta
+            
+            // Estilos para el botón secundario dentro de la tarjeta
             .btn-primary-2 {
                 display: flex;
                 align-items: center;
@@ -119,15 +122,15 @@
                 transition: background-color 0.3s ease;
                 margin-left: 10%;
                 margin-right: 10%;
-
-                // Estilos para el efecto de hover del botón
+                
+                // Estilos para el efecto de hover del botón secundario
                 &:hover {
                     background-color: #0056b3;
                 }
             }
         }
     }
-
+    
     // Definición de la animación para deslizar desde la izquierda al cargar la tarjeta
     @keyframes slideIn {
         0% {
