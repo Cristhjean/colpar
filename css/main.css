@@ -4,12 +4,13 @@
   margin-left: 15%;
   margin-right: 15%;
   padding: 8px 15px;
-  border: none;
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 10px;
   background-color: #333;
   color: #fff;
   text-align: center;
   margin-top: 10px;
+  font-family: fantasy;
 }
 @media (max-width: 720px) {
   .promo .promo {
@@ -48,6 +49,156 @@
   margin-right: 10%;
 }
 
+.btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.btn:active {
+  scale: 0.92;
+}
+
+.btn:hover {
+  background: rgb(2, 29, 78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+}
+
+header .encabezado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px black;
+  border-left: none;
+  border-right: none;
+  background-image: linear-gradient(#212121, #212121), linear-gradient(137.48deg, #527892 10%, rgba(23, 116, 255, 0.8431372549) 45%, #41f2ff 67%, rgba(253, 207, 101, 0.8431372549) 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+header #container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: rem;
+}
+header h1 {
+  z-index: 2;
+  font-family: "Poppins" sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #FFFFFF;
+  text-shadow: 0 0 4px rgb(0, 0, 0);
+}
+header #glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+header #glow .circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+header #glow .circle:nth-of-type(1) {
+  background: rgba(0, 0, 186, 0.936);
+}
+header #glow .circle:nth-of-type(2) {
+  background: rgba(0, 0, 186, 0.936);
+}
+header #stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+header #stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+header #stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-135rem);
+  }
+}
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
 header .navbar-left {
   display: flex;
   align-items: center;
@@ -57,7 +208,7 @@ header .navbar-left .logo img {
   max-width: 30%;
   height: auto;
   z-index: 1;
-  margin-left: 20%;
+  margin-left: 50%;
 }
 header .navbar-left .logo img:hover {
   transform: scale(1.2);
@@ -70,6 +221,7 @@ header .navbar-left .search-bar input {
   padding: 8px;
   border-radius: 1em;
   border: 1px solid #ccc;
+  width: 100%;
 }
 header .navbar-left .search-bar button {
   margin-left: 2px;
@@ -106,6 +258,12 @@ header .navbar-right a:hover {
   background-color: #fff;
 }
 @media (max-width: 720px) {
+  header .encabezado {
+    height: 100%;
+  }
+  header h1 {
+    text-align: center;
+  }
   header .logo img {
     width: 30%;
   }
@@ -121,7 +279,8 @@ header .navbar-right a:hover {
   }
   header .navbar-left {
     margin-bottom: 10px;
-    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 15%;
   }
   header .navbar-right {
     margin-top: 10px;
@@ -133,12 +292,7 @@ header .navbar-right a:hover {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Lemon", serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   background: url("../imgenes/fondo.jpg") no-repeat center center fixed;
   background-size: cover;
 }
@@ -152,18 +306,23 @@ body {
 .main-index .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin: 10%;
+  gap: 10%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
 }
 .main-index .grid-container .card {
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
   max-width: 100%;
   background-color: #ccc;
+  animation: slideIn 0.5s forwards ease;
 }
 .main-index .grid-container .card .card-img {
   width: 100%;
   height: 200px;
+  object-fit: cover;
 }
 .main-index .grid-container .card .card-body {
   padding: 20px;
@@ -191,19 +350,33 @@ body {
 .main-index .grid-container .card .card-body .btn-primary-2:hover {
   background-color: #0056b3;
 }
-@media (max-width: 720px) {
-  .main-index .grid-container {
-    grid-template-columns: 1fr;
-    margin: 15%;
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
+@media (max-width: 720px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin: 15% 15% 20rem;
+  }
+}
 .main-comprando .product-page {
-  width: 100%;
   background-color: #fff;
   border: 1px solid #ccc;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 10%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  border-radius: 0% 5% 5% 0%;
+  animation: slideFromRight 1s ease;
 }
 .main-comprando .product-page .product-img {
   width: 40%;
@@ -213,6 +386,14 @@ body {
   width: 100%;
   height: auto;
   border-radius: 8px 0 0 8px;
+  border: solid rgba(0, 0, 0, 0.404);
+}
+@media (max-width: 720px) {
+  .main-comprando .product-page .product-img img {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px 8px 0 0;
+  }
 }
 .main-comprando .product-page .product-info {
   width: 60%;
@@ -231,34 +412,42 @@ body {
   font-weight: bold;
   color: #333;
 }
-.main-comprando .product-page .buy-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
-.main-comprando .product-page .buy-button:hover {
-  background-color: #45a049;
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .main-comprando .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin: 10%;
+  gap: 10%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
 }
 .main-comprando .grid-container .card {
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
   max-width: 100%;
   background-color: #ccc;
+  animation: slideIn 0.5s forwards ease;
 }
 .main-comprando .grid-container .card .card-img {
   width: 100%;
   height: 200px;
+  object-fit: cover;
 }
 .main-comprando .grid-container .card .card-body {
   padding: 20px;
@@ -271,25 +460,38 @@ body {
   color: #555;
 }
 .main-comprando .grid-container .card .card-body .btn-primary-2 {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 20px;
   background-color: #000000;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  margin-left: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .main-comprando .grid-container .card .card-body .btn-primary-2:hover {
   background-color: #0056b3;
 }
-@media (max-width: 720px) {
-  .main-comprando .grid-container {
-    grid-template-columns: 1fr;
-    margin: 15%;
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
+@media (max-width: 720px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin: 15% 15% 20rem;
+  }
+}
 .main-nosotros .card-us {
   border: 4px solid rgba(75, 75, 75, 0.568627451);
   border-radius: 8px;
@@ -304,8 +506,8 @@ body {
   float: left;
 }
 .main-nosotros .card-us .card-us-img img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 10%;
   border-radius: 8px 0 0 8px;
   object-fit: cover;
 }
@@ -334,8 +536,10 @@ body {
 @media (max-width: 720px) {
   .main-nosotros .card-us .card-us-img {
     width: 100%;
+    height: 100%;
   }
   .main-nosotros .card-us .card-us-img img {
+    width: 100%;
     border-radius: 8px;
   }
   .main-nosotros .card-us .card-us-description {
@@ -357,16 +561,31 @@ body {
   height: 400px;
   margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-.main-gallery .gallery .contenedor-img:hover {
-  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 .main-gallery .gallery .contenedor-img img {
   width: 100%;
   height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+@media screen and (max-width: 720px) {
+  .main-gallery .gallery .contenedor-img:focus-within {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 721px) {
+  .main-gallery .gallery .contenedor-img:focus-within {
+    width: 50%;
+    height: auto;
+  }
 }
 
+.main-productos {
+  /* Estilos para la fila de filtros */
+  /* Estilos para el contenedor de los elementos de tarjeta */
+  /* Estilos para las tarjetas */
+}
 .main-productos .carousel .carousel-inner .d-iten .carousel-caption .btn-primary {
   background-color: #000000;
 }
@@ -374,98 +593,129 @@ body {
   background-color: #555;
 }
 .main-productos .filters-row {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  background-color: #696565;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 10px;
+  display: flex; /* Contenedor de filtros con disposición en fila */
+  justify-content: space-around; /* Alineación de elementos a lo largo del eje principal */
+  padding: 10px; /* Relleno interno */
+  background-color: #696565; /* Color de fondo */
+  border: 5px solid black; /* Borde sólido */
+  margin-bottom: 20px; /* Margen inferior */
+  margin-left: 20px; /* Margen izquierdo */
+  margin-right: 20px; /* Margen derecho */
+  border-radius: 10px; /* Radio de borde */
+  /* Estilos para los filtros */
 }
 .main-productos .filters-row .filter {
-  margin-right: 20px;
+  margin-bottom: 20px; /* Espacio inferior para separarlo de otros elementos */
+}
+.main-productos .filters-row .filter label {
+  font-weight: bold; /* Hace que el texto del label sea negrita */
+  margin-right: 10px; /* Margen derecho */
+}
+.main-productos .filters-row .filter select {
+  padding: 8px; /* Relleno interno */
+  font-size: 16px; /* Tamaño de fuente */
+  border-radius: 10px; /* Radio de borde */
+  border: 2px solid rgba(0, 0, 0, 0.5019607843); /* Borde sólido con transparencia */
+  background-color: #949391; /* Color de fondo */
+  width: 150px; /* Ancho */
+  margin-top: 20px; /* Margen superior */
+  /* Estilos cuando el select está enfocado */
+}
+.main-productos .filters-row .filter select:focus {
+  outline: none; /* Quita el contorno predeterminado */
+  border-color: #6cb2eb; /* Cambia el color del borde */
+  box-shadow: 0 0 5px #6cb2eb; /* Agrega una sombra al enfocar */
 }
 .main-productos .card-item-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: space-around;
-  margin: 10px;
+  display: flex; /* Contenedor de elementos con disposición en fila */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en líneas */
+  gap: 10px; /* Espacio entre elementos */
+  justify-content: space-around; /* Alineación de elementos a lo largo del eje principal */
+  margin: 50px; /* Margen exterior */
 }
-.main-productos .card-item-container .card-item {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 120ms;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  padding: 0.5em;
-  padding-bottom: 3.4em;
-  margin-bottom: 2%;
+.main-productos .card-item {
+  position: relative; /* Posición relativa */
+  width: 300px; /* Ancho de la tarjeta */
+  height: 400px; /* Altura de la tarjeta */
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1); /* Sombra */
+  cursor: pointer; /* Cursor al pasar por encima */
+  transition: all 120ms; /* Transición suave de propiedades */
+  display: flex; /* Elemento de tarjeta con disposición en columna */
+  flex-direction: column; /* Elemento de tarjeta con disposición en columna */
+  align-items: center; /* Alineación de elementos a lo largo del eje secundario */
+  justify-content: center; /* Alineación de elementos a lo largo del eje principal */
+  background: #fff; /* Color de fondo */
+  padding: 0.5em; /* Relleno interno */
+  padding-bottom: 3.4em; /* Relleno inferior */
+  margin-bottom: 2%; /* Margen inferior */
+  border-bottom: 5px solid rgba(0, 0, 0, 0.644); /* Borde negro solo en la parte inferior */
+  border-right: 5px solid rgba(0, 0, 0, 0.644); /* Borde negro solo en el lado derecho */
+  border-radius: 20px; /* Radio de borde */
+  /* Estilos para el texto después de la tarjeta */
+  /* Estilos para el título */
+  /* Estilos para el precio */
+  /* Estilos al pasar el cursor sobre la tarjeta */
+  /* Estilos al hacer clic en la tarjeta */
+  /* Estilos para el texto */
+  /* Estilos para la imagen */
 }
-.main-productos .card-item-container .card-item::after {
-  content: "COMPRAR";
-  padding-top: 1.25em;
-  padding-left: 1.25em;
-  position: absolute;
-  left: 0;
-  bottom: -60px;
-  background: #626464;
-  color: #fff;
-  height: 2.5em;
-  width: 90%;
-  transition: all 80ms;
-  font-weight: 600;
-  text-transform: uppercase;
-  opacity: 0;
+.main-productos .card-item::after {
+  content: "ADD al Carro"; /* Contenido del texto */
+  padding-top: 1.25em; /* Relleno superior */
+  padding-left: 1.25em; /* Relleno izquierdo */
+  position: absolute; /* Posición absoluta */
+  left: 0; /* Posicionamiento a la izquierda */
+  bottom: -60px; /* Posicionamiento desde la parte inferior */
+  background: #626464; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  height: 2.5em; /* Altura */
+  width: 90%; /* Ancho */
+  transition: all 80ms; /* Transición suave de propiedades */
+  font-weight: 600; /* Grosor del texto */
+  text-transform: uppercase; /* Transformación de texto en mayúsculas */
+  opacity: 0; /* Opacidad inicial */
 }
-.main-productos .card-item-container .card-item .title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9em;
-  position: absolute;
-  left: 0.625em;
-  bottom: 1.875em;
-  font-weight: 400;
-  color: #000;
+.main-productos .card-item .title {
+  font-family: Arial, Helvetica, sans-serif; /* Fuente */
+  font-size: 0.9em; /* Tamaño de fuente */
+  position: absolute; /* Posición absoluta */
+  left: 0.625em; /* Posicionamiento desde la izquierda */
+  bottom: 1.875em; /* Posicionamiento desde la parte inferior */
+  font-weight: 400; /* Grosor del texto */
+  color: #000; /* Color del texto */
 }
-.main-productos .card-item-container .card-item .price {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 0.9em;
-  position: absolute;
-  left: 0.625em;
-  bottom: 0.625em;
-  color: #000;
+.main-productos .card-item .price {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; /* Fuente */
+  font-size: 0.9em; /* Tamaño de fuente */
+  position: absolute; /* Posición absoluta */
+  left: 0.625em; /* Posicionamiento desde la izquierda */
+  bottom: 0.625em; /* Posicionamiento desde la parte inferior */
+  color: #000; /* Color del texto */
 }
-.main-productos .card-item-container .card-item:hover::after {
-  bottom: 0;
-  opacity: 1;
+.main-productos .card-item:hover::after {
+  bottom: 0; /* Posicionamiento desde la parte inferior */
+  opacity: 1; /* Opacidad */
 }
-.main-productos .card-item-container .card-item:active {
-  transform: scale(0.98);
+.main-productos .card-item:active {
+  transform: scale(0.98); /* Escala de transformación */
 }
-.main-productos .card-item-container .card-item:active::after {
-  content: "COMRPADO !";
-  height: 3.125em;
-  background-color: #ff3737;
+.main-productos .card-item:active::after {
+  content: "GRACIAS!"; /* Contenido del texto */
+  height: 3.125em; /* Altura */
+  background-color: #ff3737; /* Color de fondo */
 }
-.main-productos .card-item-container .text {
-  max-width: 55px;
+.main-productos .card-item .text {
+  max-width: 55px; /* Ancho máximo */
 }
-.main-productos .card-item-container .image {
-  width: 100%;
-  height: 70%;
-  place-items: center;
+.main-productos .card-item .image {
+  width: 100%; /* Ancho */
+  height: 400px; /* Altura */
+  overflow: hidden; /* Ocultar el desbordamiento */
 }
-.main-productos .card-item-container .image img {
-  max-width: 100%;
-  max-height: auto;
-  height: auto;
+.main-productos .card-item .image img {
+  width: 100%; /* Ancho */
+  height: 100%; /* Altura */
+  object-fit: cover;
 }
 
 footer {
@@ -495,7 +745,7 @@ footer .container-1 .redes a {
   text-decoration: none;
   border-radius: 20px;
   margin-right: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 150px;
   transition: color 0.3s, background-color 0.3s;
   transition: all 0.3s;
 }
@@ -510,6 +760,7 @@ footer .container-1 .contact-info {
 }
 footer .container-1 .contact-info p {
   margin: 0;
+  margin-bottom: 150px;
 }
 
 @media (max-width: 720px) {
@@ -528,8 +779,9 @@ footer .container-1 .contact-info p {
     padding: 10px;
     text-decoration: none;
     border-radius: 10px;
+    margin-top: 10%;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20%;
   }
 }
 @media (max-width: 720px) {

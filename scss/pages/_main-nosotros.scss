@@ -1,52 +1,59 @@
 .main-nosotros{
-    .card-us { 
-        border: 4px solid #4b4b4b91;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        box-sizing: border-box;
-        background-color: #a39a9a5b;
-        margin: 8%;
-        .card-us-img {
-            width: 50%;
-            float: left;
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 8px 0 0 8px;
-                object-fit: cover;
-            }
-        }
-        .card-us-description {
-            width: 50%;
-            float: left;
-            padding: 20px;
-            box-sizing: border-box;
-            h2 {
-                background-color: rgba(51, 51, 50, 0.815);
-                margin-top: 0;
-                color: rgb(255, 255, 255);
-                text-align: center;
-                border: 5px solid black;
-                border-radius: 10px;
-            }
-            p{
-                background-color: rgba(51, 51, 50, 0.815);
-                margin-top: 50px;
-                color: rgb(255, 255, 255);
-                text-align: center;
-                border: 2px solid black;
-                border-radius: 10px;
-            }
+// Estilos para la tarjeta de usuario
+.card-us { 
+    border: 4px solid #4b4b4b91; // Borde sólido con transparencia
+    border-radius: 8px; // Radio de borde
+    overflow: hidden; // Ocultar contenido que exceda el tamaño del contenedor
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Sombra
+    box-sizing: border-box; // Incluir el borde en el tamaño total del elemento
+    background-color: #a39a9a5b; // Color de fondo con transparencia
+    margin: 8%; // Margen exterior
+    // Contenedor de la imagen
+    .card-us-img {
+        width: 50%; // Ancho del contenedor de la imagen
+        float: left; // Colocar a la izquierda
+        img {
+            width: 80%; // Ancho de la imagen dentro del contenedor
+            height: 10%; // Altura de la imagen dentro del contenedor
+            border-radius: 8px 0 0 8px; // Radio de borde de la esquina superior izquierda
+            object-fit: cover; // Escalar y recortar la imagen para que se ajuste al contenedor
         }
     }
+    // Contenedor de la descripción
+    .card-us-description {
+        width: 50%; // Ancho del contenedor de la descripción
+        float: left; // Colocar a la izquierda
+        padding: 20px; // Relleno interno
+        box-sizing: border-box; // Incluir el relleno en el tamaño total del elemento
+        // Título de la descripción
+        h2 {
+            background-color: rgba(51, 51, 50, 0.815); // Color de fondo con transparencia
+            margin-top: 0; // Margen superior cero
+            color: rgb(255, 255, 255); // Color del texto
+            text-align: center; // Alineación del texto al centro
+            border: 5px solid black; // Borde sólido
+            border-radius: 10px; // Radio de borde
+        }
+        // Texto de la descripción
+        p {
+            background-color: rgba(51, 51, 50, 0.815); // Color de fondo con transparencia
+            margin-top: 50px; // Margen superior
+            color: rgb(255, 255, 255); // Color del texto
+            text-align: center; // Alineación del texto al centro
+            border: 2px solid black; // Borde sólido
+            border-radius: 10px; // Radio de borde
+        }
+    }
+}
     
     @media (max-width: 720px) {
         .card-us {
             .card-us-img {
                 width: 100%;
+                height: 100%;
 
                 img {
+                    width: 100%;
                     border-radius: 8px; // Restablecer el radio de borde
                 }
             }

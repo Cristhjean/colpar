@@ -13,106 +13,133 @@
             }
         }
     }
-    .filters-row {
-        display: flex;
-        justify-content: space-around;
-        padding: 10px;
-        background-color: #696565;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-        border-radius: 10px;
+/* Estilos para la fila de filtros */
+.filters-row {
+    display: flex; /* Contenedor de filtros con disposición en fila */
+    justify-content: space-around; /* Alineación de elementos a lo largo del eje principal */
+    padding: 10px; /* Relleno interno */
+    background-color: #696565; /* Color de fondo */
+    border:5px solid black; /* Borde sólido */
+    margin-bottom: 20px; /* Margen inferior */
+    margin-left: 20px; /* Margen izquierdo */
+    margin-right: 20px; /* Margen derecho */
+    border-radius: 10px; /* Radio de borde */
+    /* Estilos para los filtros */
     .filter {
-        margin-right: 20px;
+        margin-bottom: 20px; /* Espacio inferior para separarlo de otros elementos */
+        label {
+            font-weight: bold; /* Hace que el texto del label sea negrita */
+            margin-right: 10px; /* Margen derecho */
+        }
+        select {
+            padding: 8px; /* Relleno interno */
+            font-size: 16px; /* Tamaño de fuente */
+            border-radius: 10px; /* Radio de borde */
+            border: 2px solid #00000080; /* Borde sólido con transparencia */
+            background-color: #949391; /* Color de fondo */
+            width: 150px; /* Ancho */
+            margin-top: 20px; /* Margen superior */
+            /* Estilos cuando el select está enfocado */
+            &:focus {
+                outline: none; /* Quita el contorno predeterminado */
+                border-color: #6cb2eb; /* Cambia el color del borde */
+                box-shadow: 0 0 5px #6cb2eb; /* Agrega una sombra al enfocar */
+            }
+        }
     }
 }
+
+/* Estilos para el contenedor de los elementos de tarjeta */
 .card-item-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-around;
-    margin: 10px;
+    display: flex; /* Contenedor de elementos con disposición en fila */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en líneas */
+    gap: 10px; /* Espacio entre elementos */
+    justify-content: space-around; /* Alineación de elementos a lo largo del eje principal */
+    margin: 50px; /* Margen exterior */
+}
+    /* Estilos para las tarjetas */
     .card-item {
-        position: relative;
-        width: 300px; 
-        height: 400px; 
-        box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: all 120ms;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: #fff;
-        padding: 0.5em;
-        padding-bottom: 3.4em;
-        margin-bottom: 2%;
+        position: relative; /* Posición relativa */
+        width: 300px; /* Ancho de la tarjeta */
+        height: 400px; /* Altura de la tarjeta */
+        box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1); /* Sombra */
+        cursor: pointer; /* Cursor al pasar por encima */
+        transition: all 120ms; /* Transición suave de propiedades */
+        display: flex; /* Elemento de tarjeta con disposición en columna */
+        flex-direction: column; /* Elemento de tarjeta con disposición en columna */
+        align-items: center; /* Alineación de elementos a lo largo del eje secundario */
+        justify-content: center; /* Alineación de elementos a lo largo del eje principal */
+        background: #fff; /* Color de fondo */
+        padding: 0.5em; /* Relleno interno */
+        padding-bottom: 3.4em; /* Relleno inferior */
+        margin-bottom: 2%; /* Margen inferior */
+        border-bottom: 5px solid rgba(0, 0, 0, 0.644); /* Borde negro solo en la parte inferior */
+        border-right: 5px solid rgba(0, 0, 0, 0.644); /* Borde negro solo en el lado derecho */
+        border-radius: 20px; /* Radio de borde */
+        /* Estilos para el texto después de la tarjeta */
+        &::after {
+            content: "ADD al Carro"; /* Contenido del texto */
+            padding-top: 1.25em; /* Relleno superior */
+            padding-left: 1.25em; /* Relleno izquierdo */
+            position: absolute; /* Posición absoluta */
+            left: 0; /* Posicionamiento a la izquierda */
+            bottom: -60px; /* Posicionamiento desde la parte inferior */
+            background: #626464; /* Color de fondo */
+            color: #fff; /* Color del texto */
+            height: 2.5em; /* Altura */
+            width: 90%; /* Ancho */
+            transition: all 80ms; /* Transición suave de propiedades */
+            font-weight: 600; /* Grosor del texto */
+            text-transform: uppercase; /* Transformación de texto en mayúsculas */
+            opacity: 0; /* Opacidad inicial */
+        }
+        /* Estilos para el título */
+        .title {
+            font-family: Arial, Helvetica, sans-serif; /* Fuente */
+            font-size: 0.9em; /* Tamaño de fuente */
+            position: absolute; /* Posición absoluta */
+            left: 0.625em; /* Posicionamiento desde la izquierda */
+            bottom: 1.875em; /* Posicionamiento desde la parte inferior */
+            font-weight: 400; /* Grosor del texto */
+            color: #000; /* Color del texto */
+        }
+        /* Estilos para el precio */
+        .price {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Fuente */
+            font-size: 0.9em; /* Tamaño de fuente */
+            position: absolute; /* Posición absoluta */
+            left: 0.625em; /* Posicionamiento desde la izquierda */
+            bottom: 0.625em; /* Posicionamiento desde la parte inferior */
+            color: #000; /* Color del texto */
+        }
+        /* Estilos al pasar el cursor sobre la tarjeta */
+        &:hover::after {
+            bottom: 0; /* Posicionamiento desde la parte inferior */
+            opacity: 1; /* Opacidad */
+        }
+        /* Estilos al hacer clic en la tarjeta */
+        &:active {
+            transform: scale(0.98); /* Escala de transformación */
+        }
+        &:active::after {
+            content: "GRACIAS!"; /* Contenido del texto */
+            height: 3.125em; /* Altura */
+            background-color: #ff3737; /* Color de fondo */
+        }
+        /* Estilos para el texto */
+        .text {
+            max-width: 55px; /* Ancho máximo */
+        }
+        /* Estilos para la imagen */
+        .image {
+            width: 100%; /* Ancho */
+            height: 400px; /* Altura */
+            overflow: hidden; /* Ocultar el desbordamiento */
+            img {
+                width: 100%; /* Ancho */
+                height: 100%; /* Altura */
+        object-fit: cover;
     }
-    
-    .card-item::after {
-        content: "COMPRAR";
-        padding-top: 1.25em;
-        padding-left: 1.25em;
-        position: absolute;
-        left: 0;
-        bottom: -60px;
-        background: #626464;
-        color: #fff;
-        height: 2.5em;
-        width: 90%;
-        transition: all 80ms;
-        font-weight: 600;
-        text-transform: uppercase;
-        opacity: 0;
-    }
-    
-    .card-item .title {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.9em;
-        position: absolute;
-        left: 0.625em;
-        bottom: 1.875em;
-        font-weight: 400;
-        color: #000;
-    }
-    
-    .card-item .price {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 0.9em;
-        position: absolute;
-        left: 0.625em;
-        bottom: 0.625em;
-        color: #000;
-    }
-    
-    .card-item:hover::after {
-        bottom: 0;
-        opacity: 1;
-    }
-    
-    .card-item:active {
-        transform: scale(0.98);
-    }
-    
-    .card-item:active::after {
-        content: "COMRPADO !";
-        height: 3.125em;
-        background-color: #ff3737;
-    }
-    
-    .text {
-        max-width: 55px;
-    }
-    .image {
-        width: 100%;
-        height: 70%; 
-        place-items: center;
-    }
-    
-    .image img {
-        max-width: 100%;
-        max-height: auto; 
-        height: auto;
-    }
+}
 }
 }

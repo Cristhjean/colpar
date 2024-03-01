@@ -8,15 +8,32 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
 <body>
+    <!-- Encabezado -->
     <header class="header">
+        <div type="titulo" class="encabezado">
+            <h1><strong>Local de Sublimacion numero 1 en la argentina,20% de descuento para usuarios Frecuentes en Remeras, Tasas y cintas   </strong></h1>
+            <!-- Contenedor para estrellas -->
+            <div id="container-stars">
+            <div id="stars"></div>
+            </div>
+            <!-- Brillo -->
+            <div id="glow">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            </div>
+        </div>
+        <!-- Barra de navegación -->
         <nav class="navbar">
             <div class="navbar-left">
+                <!-- Logo -->
                 <a class="logo" href="#"><img src="./imgenes/logo.png" alt="Logo-colpar"></a>
                 <div class="search-bar">
+                    <!-- Barra de búsqueda -->
                     <input type="text" placeholder="Buscar...">
                     <button type="submit">Buscar</button>
                 </div>
             </div>
+            <!-- Enlaces de navegación -->
             <div class="navbar-right">
                 <a href="./pages/productos.html">Productos</a>
                 <a href="./pages/Galeria.html">Galeria</a>
@@ -25,6 +42,8 @@
         </nav>
     </header>
     <main class="main-index">
+        <h2 class="promo">No te pierdas de nuestras Promociones de el mes de Marzo. </h2>
+        <!-- Carrusel --> 
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -33,7 +52,7 @@
             </div>
             <div class="carousel-inner">
             <div class="carousel-item active d-iten">
-                <img src="./imgenes/remera-personalizada.jpg" class="d-block w-100 d-img" alt="Promociones">
+                <img src="./imgenes/remera-personalizada.jpg" class="d-block w-100 d-img" alt="remeras">
                 <div class="carousel-caption top-0 mt-4">
                     <p mt-5 fs-3 text-upercase>Personalizada y de la mejor calidad</p>
                     <h1 class="display-1 fw-bolder text-capitalize">Remeras</h1>
@@ -41,7 +60,7 @@
                 </div>
             </div>
             <div class="carousel-item active d-iten">
-                <img src="./imgenes/taza-personalizada.png" class="d-block w-100 d-img" alt="Promociones">
+                <img src="./imgenes/taza-personalizada.png" class="d-block w-100 d-img" alt="tazas">
                 <div class="carousel-caption top-0 mt-4">
                     <p mt-5 fs-3 text-upercase>El diseño que mas te guste para tu..</p>
                     <H2 class="display-1 fw-bolder text-capitalize">Tazas</H2>
@@ -49,10 +68,10 @@
                 </div>
             </div>
             <div class="carousel-item active d-iten">
-                <img src="./imgenes/cinta-porta-credencial.jpg" class="d-block w-100 d-img" alt="Promociones">
+                <img src="./imgenes/cinta-porta-credencial.jpg" class="d-block w-100 d-img" alt="cintas">
                 <div class="carousel-caption top-0 mt-4">
                     <p mt-5 fs-3 text-upercase>Porta credencial Personalizada</p>
-                    <h2 class="display-1 fw-bolder text-capitalize w-100">cintas</h2>
+                    <h2 class="display-1 fw-bolder text-capitalize w-100">Cintas</h2>
                     <Button class="btn btn-primary px-4 py-1 ps-4 mt-5">Informacion</Button>
                 </div>
             </div>
@@ -69,34 +88,34 @@
         <h2 class="promo"> Promociones </h2> 
         <div class="grid-container">
             <div class="card">
-                <img src="./imgenes/cinta-porta-credencial.jpg" class="card-img" alt="imagen-producto">
+                <img src="./imgenes/cinta-porta-credencial.jpg" class="card-img" alt="porta-credencial">
                 <div class="card-body">
-                    <h5 class="card-title">Porta credencial</h5>
+                    <h2 class="card-title">Porta credencial</h2>
                     <p class="card-text">Porta credencial sablumida con el logo de tu empresa...</p>
                     <a href="./pages/Comprando.html" class="btn btn-primary-2">Comprar</a>
                 </div>
             </div>
     
             <div class="card">
-                <img src="./imgenes/remera-personalizada.jpg" class="card-img" alt="imagen-producto">
+                <img src="./imgenes/remera-personalizada.jpg" class="card-img" alt="remeras-personalizadas">
                 <div class="card-body">
-                    <h5 class="card-title">Remeras Personalizadas</h5>
+                    <h2 class="card-title">Remeras Personalizadas</h2>
                     <p class="card-text">Personalizada con el diseño que mas te guste..</p>
                     <a href="./pages/Comprando.html" class="btn btn-primary-2">Comprar</a>
                 </div>
             </div>
     
             <div class="card">
-                <img src="./imgenes/taza-personalizada.png" class="card-img" alt="imagen-producto">
+                <img src="./imgenes/taza-personalizada.png" class="card-img" alt="tasa-sublimada">
                 <div class="card-body">
-                    <h5 class="card-title">Taza sublimada</h5>
+                    <h2 class="card-title">Taza sublimada</h2>
                     <p class="card-text">Perfecto para regalo com el diseño de tu eleccion</p>
                     <a href="./pages/Comprando.html" class="btn btn-primary-2">Comprar</a>
                 </div>
             </div>
         </div>
     </main>
-
+<!-- Pie de página -->
     <footer class="footer">
         <div class="container-1">
             <div class="redes">
